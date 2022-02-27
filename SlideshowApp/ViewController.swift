@@ -104,6 +104,15 @@ class ViewController: UIViewController {
         SlideImage.image = imageBox[nowIndex]
     }
     
+    // スライド画像をタップした時に次の画面に遷移する処理
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // 遷移先のBigImageのインスタンス生成
+        let bigImageViewController: BigImageViewController = segue.destination as! BigImageViewController
+        
+        // 遷移先で宣言している画像の変数に表示する変数を渡す
+        bigImageViewController.selectImage = imageBox[nowIndex]
+    }
+    
     // 遷移先画面から戻ってきた時に呼ばれる処理
     @IBAction func unwind(_ segue: UIStoryboardSegue) {
         

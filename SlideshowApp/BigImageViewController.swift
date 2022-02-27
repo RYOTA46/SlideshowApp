@@ -11,13 +11,18 @@ class BigImageViewController: UIViewController {
     
     // 各種初期値設定
     // 拡大画像の初期値
-    @IBOutlet weak var BigImage: UIImageView!
+    @IBOutlet weak var bigImage: UIImageView!
+    // 遷移元画面から受け取るための変数
+    var selectImage: UIImage!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        
+        // 遷移元画面から値を受け取る
+        bigImage.image = selectImage
     }
+    
     
     
     
