@@ -22,10 +22,7 @@ class BigImageViewController: UIViewController {
         // 遷移元画面から値を受け取る
         bigImage.image = selectImage
     }
-    
-    
-    
-    
+
 
     /*
     // MARK: - Navigation

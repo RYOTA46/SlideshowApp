@@ -16,8 +16,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Ci-55-2eu">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Ci-55-2eu">
                                 <rect key="frame" x="90" y="144" width="195" height="241"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="xJF-XG-Kw5" appends="YES" id="KdB-we-TWL"/>
+                                </connections>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nKd-Wl-Rw3">
                                 <rect key="frame" x="294" y="517" width="61" height="53"/>
@@ -69,10 +73,15 @@
                         <outlet property="backButton" destination="WcG-F3-xtt" id="6vs-6V-WdK"/>
                         <outlet property="nextButton" destination="nKd-Wl-Rw3" id="ibS-iA-OzX"/>
                         <outlet property="startButton" destination="yQz-OR-BEB" id="exk-iG-gpi"/>
-                        <segue destination="yNa-DF-XuY" kind="show" identifier="toBigImage" id="z1V-D8-wbA"/>
+                        <segue destination="yNa-DF-XuY" kind="show" identifier="toBigView" id="HVS-t9-ZEk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="xJF-XG-Kw5">
+                    <connections>
+                        <action selector="tapImage:" destination="BYZ-38-t0r" id="0ac-ni-fk7"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="75.669642857142847"/>
         </scene>
