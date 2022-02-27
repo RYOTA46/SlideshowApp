@@ -8,12 +8,18 @@
 import UIKit
 
 class BigImageViewController: UIViewController {
-
+    
+    // 各種初期値設定
+    // 拡大画像の初期値
+    @IBOutlet weak var BigImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    
+    
     
 
     /*

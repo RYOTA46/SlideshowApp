@@ -9,31 +9,25 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    // 各ボタンの表示用変数
+    // 各種初期設定
     // 再生ボタン
     @IBOutlet weak var startButton: UIButton!
     // 戻るボタン
     @IBOutlet weak var backButton: UIButton!
     // 進むボタン
     @IBOutlet weak var nextButton: UIButton!
-    
-    
     //画像用の変数
     @IBOutlet weak var SlideImage: UIImageView!
-    
     // スライドショーで表示される画像を配列に格納
     var imageBox:[UIImage] = [
         UIImage(named: "Imaage_001.jpg")!,
         UIImage(named: "Imaage_002.jpg")!,
         UIImage(named: "Imaage_003.jpg")!
     ]
-    
     // 画像配列用のインデックス
     var nowIndex:Int = 0
-    
     // タイマーの生成
     var timer: Timer!
-    
     // タイマー時間をカウントするための変数
     var timer_sec: Float = 0
 
@@ -92,7 +86,7 @@ class ViewController: UIViewController {
             nowIndex = imageBox.count
         }
         // インデックスの画像をスライドにセットする
-        SlideImage.image = imageBox[nowIndex]
+        SlideImage.image = imageBox[nowIndex - 1]
     }
     
     // タイマー作成時に呼び出されるメソッド
@@ -110,6 +104,10 @@ class ViewController: UIViewController {
         SlideImage.image = imageBox[nowIndex]
     }
     
-    
+    // 遷移先画面から戻ってきた時に呼ばれる処理
+    @IBAction func unwind(_ segue: UIStoryboardSegue) {
+        
+    }
+
 }
 
