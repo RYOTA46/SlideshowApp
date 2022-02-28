@@ -119,20 +119,6 @@ class ViewController: UIViewController {
         }
     }
     
-    /*
-    @IBAction func tapImage(sender: AnyObject) {
-         遷移先のBigImageのインスタンス生成
-        let bigImageViewController: BigImageViewController = segue.destination as! BigImageViewController
-        
-        // 遷移先で宣言している画像の変数に表示する変数を渡す
-        bigImageViewController.selectImage = imageBox[nowIndex]
-        
-        // segueを使用して画面を遷移
-        performSegue(withIdentifier: "toBigView", sender: nil)
-    }*/
-
-
-    
     // 遷移先画面から戻ってきた時に呼ばれる処理
     @IBAction func unwind(_ segue: UIStoryboardSegue) {
         
