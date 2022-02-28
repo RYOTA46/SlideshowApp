@@ -79,7 +79,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="xJF-XG-Kw5">
                     <connections>
-                        <action selector="tapImage:" destination="BYZ-38-t0r" id="0ac-ni-fk7"/>
+                        <action selector="tapImage:" destination="BYZ-38-t0r" id="mOW-B2-g0w"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -93,11 +93,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yUJ-gL-FeI">
-                                <rect key="frame" x="0.0" y="-57" width="375" height="698"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yUJ-gL-FeI">
+                                <rect key="frame" x="16" y="20" width="343" height="605"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Doy-Bw-jvk">
-                                <rect key="frame" x="157" y="676" width="62" height="48"/>
+                                <rect key="frame" x="157" y="660" width="61" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="戻る"/>
                                 <connections>
@@ -109,14 +109,18 @@
                         <viewLayoutGuide key="safeArea" id="VRb-Or-1o2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Doy-Bw-jvk" firstAttribute="bottom" secondItem="VRb-Or-1o2" secondAttribute="bottom" id="BfK-1L-S5x"/>
-                            <constraint firstItem="VRb-Or-1o2" firstAttribute="trailing" secondItem="Doy-Bw-jvk" secondAttribute="trailing" constant="156" id="QpY-l3-FYR"/>
-                            <constraint firstItem="Doy-Bw-jvk" firstAttribute="top" secondItem="yUJ-gL-FeI" secondAttribute="bottom" constant="10" id="coZ-iC-iCL"/>
-                            <constraint firstItem="Doy-Bw-jvk" firstAttribute="centerX" secondItem="r8g-R8-5Om" secondAttribute="centerX" id="oeW-Wv-zEj"/>
-                            <constraint firstItem="Doy-Bw-jvk" firstAttribute="leading" secondItem="VRb-Or-1o2" secondAttribute="leading" constant="157" id="rpc-5h-8Mb"/>
+                            <constraint firstItem="Doy-Bw-jvk" firstAttribute="centerX" secondItem="r8g-R8-5Om" secondAttribute="centerX" id="WSg-pl-fpO"/>
+                            <constraint firstItem="VRb-Or-1o2" firstAttribute="trailing" secondItem="yUJ-gL-FeI" secondAttribute="trailing" constant="16" id="b16-HE-4R0"/>
+                            <constraint firstItem="yUJ-gL-FeI" firstAttribute="top" secondItem="VRb-Or-1o2" secondAttribute="top" constant="20" id="bvI-mQ-3HY"/>
+                            <constraint firstItem="yUJ-gL-FeI" firstAttribute="leading" secondItem="VRb-Or-1o2" secondAttribute="leading" constant="16" id="e5m-nk-C3b"/>
+                            <constraint firstItem="Doy-Bw-jvk" firstAttribute="top" secondItem="yUJ-gL-FeI" secondAttribute="bottom" constant="35" id="fj6-MG-jmT"/>
+                            <constraint firstItem="VRb-Or-1o2" firstAttribute="bottom" secondItem="Doy-Bw-jvk" secondAttribute="bottom" constant="16" id="sXK-Zw-3aj"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="IdQ-re-OTK"/>
+                    <connections>
+                        <outlet property="bigImage" destination="yUJ-gL-FeI" id="DXQ-Cc-JWL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3zX-aa-RI8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="CJE-fX-e8S" userLabel="Exit" sceneMemberID="exit"/>
